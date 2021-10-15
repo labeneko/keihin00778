@@ -1,2 +1,1 @@
-tail -n 23 images/24h.txt
-keihin00778/images/2021/10/15/202110151556.jpg
+keihin00778/images/2021/10/15/202110151610.jpg
