@@ -46,6 +46,7 @@ jobs:
           previousmd5=`md5sum ${previousimagepath} | awk '{ print $1 }'`
           echo $currentmd5
           echo $previousmd5
+          if [[ $currentmd5 != $previousmd5 ]]; then echo tail -n 23 "images/24h.txt" > "images/24h.txt"; fi
           if [[ $currentmd5 != $previousmd5 ]]; then echo "keihin00778/$savepath" >> "images/24h.txt"; fi
           if [[ $currentmd5 != $previousmd5 ]]; then echo "keihin00778/$savepath" >> "images/${year}/${month}/${date}/images.txt"; fi
           if [[ $currentmd5 == $previousmd5 ]]; then rm $savepath ; fi
